@@ -1,0 +1,51 @@
+<br><br><br> <br><br>
+
+<div *ngIf="!getAuthenticatedState() && forma.submitted" class="alert alert-warning" role="alert">
+  Los datos introducidos son incorrectos
+</div>
+
+<form #forma="ngForm" (ngSubmit)="login()">
+<div class="row">
+  <div class="col text-center">
+    <h5>Usuario</h5>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col col-centered"  style="max-width: 600px">
+    <input class="form-control"
+           type="text"
+           name="usuario"
+           placeholder="Nombre de usuario" [(ngModel)]="usuario">
+  </div>
+
+    </div>
+
+<div class="row">
+  <div class="col text-center">
+    <h5>Contraseña</h5>
+  </div>
+</div>
+
+
+
+
+  <div class="form-group row">
+    <div class="col col-centered" style="max-width: 600px">
+      <input class="form-control"
+             type="text"
+             name="password"
+             placeholder="Contraseña" [(ngModel)]="password">
+    </div>
+
+  </div>
+<br><br>
+  <div class="form-group row">
+    <div class="input-group col col-centered" style="max-width: 600px">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Comprobar
+      </button>
+    </div>
+  </div>
+</form>
+

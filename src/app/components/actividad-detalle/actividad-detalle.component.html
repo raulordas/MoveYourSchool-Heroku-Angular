@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-centered">
+    <div class="card mb-3 w-75 mx-auto">
+      <img [src]="actividadSeleccionada.urlFoto" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{actividadSeleccionada.titulo}}</h5>
+        <p class="card-text">{{actividadSeleccionada.descripcion}}</p>
+
+        <div class="row text-center mb-5">
+          <div class="col sm-4"><img class="svg" src="assets/images/tiempo.svg">
+            <h6>Duración Actividad</h6>
+            <h3>{{actividadSeleccionada.duracion}} H</h3>
+          </div>
+        </div>
+
+        <h3 class="titular text-center">Servicios Disponibles:</h3>
+
+        <div class="row text-center mb-5 mt-5" *ngIf="actividadSeleccionada.cafeteria">
+          <div class="col sm-3"><img class="svg" src="assets/images/cafeteria.svg">
+          <h6>Bar - Restaurante</h6>
+          </div>
+
+
+          <div class="col sm-3" *ngIf="actividadSeleccionada.aseos">
+            <img class="svg" src="assets/images/inodoro.svg">
+            <h6>Aseos</h6>
+          </div>
+
+          <div class="col sm-3" *ngIf="actividadSeleccionada.personasDiversidad">
+            <img class="svg" src="assets/images/diversidad.svg">
+            <h6>Personas con Diversidad</h6>
+          </div>
+
+          <div class="col sm-3" *ngIf="!actividadSeleccionada.riesgoAccidente">
+            <img class="svg" src="assets/images/riesgo.svg">
+            <h6>Actividad de Riesgo</h6>
+          </div>
+
+        </div>
+
+
+
+        <div class="row text-center" *ngIf="actividadSeleccionada.maxPlazas != 0">
+          <div class="col sm-4"><img class="svg" src="assets/images/maxpeople.svg">
+            <h6>Grupo Máximo Personas</h6>
+            <h3>{{actividadSeleccionada.maxPlazas}}</h3>
+          </div>
+
+
+          <div class="col sm-4" *ngIf="actividadSeleccionada.minPlazas != 0">
+            <img class="svg" src="assets/images/minpeople.svg">
+            <h6>Grupo Mínimo Personas</h6>
+            <h3>{{actividadSeleccionada.minPlazas}}</h3>
+          </div>
+
+        </div>
+
+        <h3 class="titular text-center mt-3">Localización:</h3>
+
+        <div class="row text-center mb-5 mt-5">
+
+
+          <div class="col sm-3">
+            <h6>Localidad</h6>
+            <h4>{{actividadSeleccionada.localidad}}</h4>
+          </div>
+
+
+          <div class="col sm-3">
+            <h6>Municipio</h6>
+            <h4>{{actividadSeleccionada.municipio}}</h4>
+          </div>
+
+          <div class="col sm-3">
+            <h6>Dirección</h6>
+            <h4>{{actividadSeleccionada.direccion}}</h4>
+          </div>
+
+        </div>
+
+
+        <button type="button" class="btn btn-primary" (click)="backToMenu()">Regresar</button>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+</div>
+
+

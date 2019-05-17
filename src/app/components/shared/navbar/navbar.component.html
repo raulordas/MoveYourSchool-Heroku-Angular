@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-md-3">
+  <img src="assets/images/MoveSchoolHoriz.svg" width="250" style="margin-right: 30px">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="'/actividades'">Actividades</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="'/usuarios'">Usuarios</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="'/reservas'">Reservas</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Log-Out</button>
+    </form>
+  </div>
+</nav>

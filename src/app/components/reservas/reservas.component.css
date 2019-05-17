@@ -1,0 +1,29 @@
+.aceptada {
+  background-color: #AEC6CF;
+  color: white;
+  font-size: 15px;
+  width: 150px;
+  border-width: 0px;
+}
+
+.rechazada {
+  background-color: #E2584D;
+  color: white;
+  font-size: 15px;
+  border-width: 0px;
+  width: 150px;
+}
+
+.pendiente {
+  background-color: #EFC85E;
+  color: black;
+  font-size: 15px;
+  border-width: 0px;
+  width: 150px;
+}
+
+.padd {
+  border-collapse: separate;
+  margin-bottom: 35px;
+  width: 100%;
+}

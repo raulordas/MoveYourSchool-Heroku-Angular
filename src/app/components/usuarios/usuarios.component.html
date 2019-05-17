@@ -1,0 +1,17 @@
+
+<div class="card-columns mt-5">
+  <div class="card text-center" *ngFor="let usuario of usuarios; let i = index;">
+    <img *ngIf="usuario.urlFoto != null && usuario.urlFoto != ''" [src]="usuario.urlFoto" class="card-img-top mt-2" alt="...">
+    <img *ngIf="usuario.urlFoto == '' || usuario.urlFoto == null" src="assets/images/idea.png" class="card-img-top mt-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{usuario.nombre}}</h5>
+      <p class="card-text">{{usuario.email}}</p>
+      <p class="card-text">{{usuario.tipo}}</p>
+      <a class="btn btn-primary btn-block" (click)="verDetalle(i)">Ver Detalles</a>
+    </div>
+  </div>
+</div>
+
+
+
+

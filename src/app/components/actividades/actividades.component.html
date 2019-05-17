@@ -1,0 +1,20 @@
+<div class="col-centered mt-5">
+  <input class="form-control mr-sm-2" type="text" #seacher (keyup)="setTermino(seacher.value)" placeholder="Buscar">
+
+</div>
+
+<div class="card-columns mt-5">
+  <div *ngIf="!loading">
+
+    <div class="card" *ngFor="let actividad of actividades | filterActividades: termino" (update)="ngOnInit()">
+      <img [src]="actividad.urlFoto" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{actividad.titulo}}</h5>
+        <p class="card-text">{{actividad.descripcion}}</p>
+        <button type="button" class="btn btn-primary"  (click)="verDetalles(actividad.uid_actividad)">Ver Detalles</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
