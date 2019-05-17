@@ -1,0 +1,16 @@
+.svg {
+  width: 40px;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+.titular {
+  background-color: #AEC6CF;
+  color: white;
+}

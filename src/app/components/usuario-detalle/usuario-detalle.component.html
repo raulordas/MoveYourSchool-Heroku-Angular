@@ -1,81 +1,38 @@
 <div class="row">
-  <div class="col-centered">
-    <div class="card mb-3 w-75 mx-auto">
-      <img *ngIf="usuarioDetalle.urlFoto != null && usuarioDetalle.urlFoto != ''" [src]="usuarioDetalle.urlFoto" class="card-img-top mt-2" alt="...">
-      <img *ngIf="usuarioDetalle.urlFoto == '' || usuarioDetalle.urlFoto == null" src="assets/images/idea.png" class="card-img-top mt-2" alt="...">
+  <div class="col-centered col-sm-10">
+    <div class="card mb-3 w-75 text-center mx-auto">
+
+      <div class="col-centered">
+        <img *ngIf="usuarioDetalle.urlFoto != null && usuarioDetalle.urlFoto != ''" [src]="usuarioDetalle.urlFoto" class="card-img-top mt-2" alt="...">
+        <img *ngIf="usuarioDetalle.urlFoto == '' || usuarioDetalle.urlFoto == null" src="assets/images/idea.png" class="card-img-top mt-2" alt="...">
+
+      </div>
+
 
       <div class="card-body">
         <h5 class="card-title">{{usuarioDetalle.nombre}}</h5>
         <p class="card-text">{{usuarioDetalle.email}}</p>
+        <p class="card-text">{{usuarioDetalle.descripcion}}</p>
 
-        <div class="row text-center mb-5">
-          <div class="col sm-4"><img class="svg" src="assets/images/tiempo.svg">
-            <h6>Duración Actividad</h6>
-            <h3> H</h3>
-          </div>
-        </div>
+        <h4 class="titular text-center mt-3">Localización:</h4>
 
-        <h3 class="titular text-center">Servicios Disponibles:</h3>
-
-        <div class="row text-center mb-5 mt-5">
-          <div class="col sm-3"><img class="svg" src="assets/images/cafeteria.svg">
-            <h6>Bar - Restaurante</h6>
-          </div>
-
-
-          <div class="col sm-3">
-            <img class="svg" src="assets/images/inodoro.svg">
-            <h6>Aseos</h6>
-          </div>
-
-          <div class="col sm-3">
-            <img class="svg" src="assets/images/diversidad.svg">
-            <h6>Personas con Diversidad</h6>
-          </div>
-
-          <div class="col sm-3">
-            <img class="svg" src="assets/images/riesgo.svg">
-            <h6>Actividad de Riesgo</h6>
-          </div>
-
-        </div>
-
-
-
-        <div class="row text-center">
-          <div class="col sm-4"><img class="svg" src="assets/images/maxpeople.svg">
-            <h6>Grupo Máximo Personas</h6>
-            <h3></h3>
-          </div>
-
-
-          <div class="col sm-4">
-            <img class="svg" src="assets/images/minpeople.svg">
-            <h6>Grupo Mínimo Personas</h6>
-            <h3></h3>
-          </div>
-
-        </div>
-
-        <h3 class="titular text-center mt-3">Localización:</h3>
-
-        <div class="row text-center mb-5 mt-5">
+        <div class="row text-center mb-5 mt-2">
 
 
           <div class="col sm-3">
             <h6>Localidad</h6>
-            <h4>{{usuarioDetalle.localidad}}</h4>
+            <h5>{{usuarioDetalle.localidad}}</h5>
           </div>
 
 
           <div class="col sm-3">
             <h6>Municipio</h6>
-            <h4>{{usuarioDetalle.municipio}}</h4>
+            <h5>{{usuarioDetalle.municipio}}</h5>
           </div>
 
           <div class="col sm-3">
             <h6>Dirección</h6>
-            <h4>{{usuarioDetalle.direccion}}</h4>
+            <h5>{{usuarioDetalle.direccion}}</h5>
           </div>
 
         </div>
