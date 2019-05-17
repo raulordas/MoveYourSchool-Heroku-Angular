@@ -8,9 +8,9 @@ import {FirebaseusuariosService} from '../../services/firebaseusuarios.service';
   styleUrls: ['./usuario-detalle.component.css']
 })
 export class UsuarioDetalleComponent implements OnInit {
-  private usuarioDetalle: Usuario;
+  public usuarioDetalle: Usuario;
 
-  constructor(private serviceUsuarios: FirebaseusuariosService) {
+  constructor(public serviceUsuarios: FirebaseusuariosService) {
     this.usuarioDetalle = this.serviceUsuarios.getUsuarioSeleccionado();
     console.log(this.usuarioDetalle);
   }

@@ -8,9 +8,9 @@ import {Reserva} from '../../interfaces/reserva';
   styleUrls: ['./reservas.component.css']
 })
 export class ReservasComponent implements OnInit {
-  private reservas: Reserva[] = [];
+  public reservas: Reserva[] = [];
 
-  constructor(private serviceReservas: FirebasereservasService) {
+  constructor(public serviceReservas: FirebasereservasService) {
 
     this.serviceReservas.getAllUsers().subscribe(value => {
       for (let clave in value) {
